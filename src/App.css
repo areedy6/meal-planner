@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Nav{
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(150deg,purple,pink);
+  position: sticky;
+  top:0;
+  left:0;
+}
+
+.Nav a{
+  color: white;
+  text-decoration: none;
+}
+
+.rightNav ul{
+  width:40vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.rightNav li{
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.rightNav li:hover{
+  background: rgb(88, 39, 4);
+}
+

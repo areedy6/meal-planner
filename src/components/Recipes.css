@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+.Search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+
+.Search input[type="text"]{
+    margin:5px;
+    padding: 10px;
+    width:30vw;
+    font-size: 18px;
+}
+
+.Search button{
+    margin:5px;
+    padding: 10px;
+    width:80px;
+    font-size: 18px;
+    color: white;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    background: radial-gradient(chocolate,purple);
+}
+
+.Search input[type="checkbox"]{
+    margin:5px;
+    zoom:2;
+}
+
+.checkboxInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Recipes*/
+.recipeList{
+    width:100vw;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+
+.recipeItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.recipeItem img{
+    margin:5px;
+    cursor: pointer;
+}
+
+/*Ingredients*/
+.IngredientPage{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.IngredientPage h2{
+    margin: 10px;
+}
+
+.IngredientPage .image{
+    text-align: center;
+    height: 92vh;
+    width:45vw;
+    padding: 10px;
+}
+
+.IngredientPage .list{
+    margin: 10px;
+    width: 45vw;
+    min-height: 100vh;
+}
+
+.IngredientPage  ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredientItem{
+    margin: 10px;
+    padding: 10px;
+    border-left : 2px solid rgb(82, 2, 16);
+}
+
+/*About and contact pages*/
+.container{
+    display: grid;
+    place-items: center;
+    margin: 2vw;
+}
+
+.heading{
+    font-size: 2rem;
+}
+
+.contact ul{
+    list-style: none;
+    margin: 1.1rem 0.8rem;
+    font-size: 1.3rem;
+}
+
+.contact{
+    display: flex;
+}
+
+.contact li{
+    border: 1px solid rgb(82, 2, 16);
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(255, 206, 213);
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+}
+
+.about p{
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+}
+
+@media(max-width:768px){
+    .Search input[type="text"]{
+        width:50vw;
+        font-size: 18px;
+    }
+    .IngredientPage{
+        display: inline-block;
+    }
+
+    .IngredientPage .image{
+        width:100vw;
+        height:auto;
+    }
+    .IngredientPage .list{
+        width:100vw;
+        height: auto;
+    }
+
+    .IngredientPage img{
+        width:100vw;
+        height:50vh;
+    }
+}
+
+@media(max-width: 500px){
+    /*about and contact pages*/
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    .contact ul{
+        margin: 1.1rem 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .contact li{
+        border-radius: .2rem;
+        padding: 0.5rem;
+    }
+
+}
