@@ -68,6 +68,10 @@ function Recipes() {
                                 <img src={recipe.image} alt="..." />
                             </Link>
                             <p>Calories : {recipe.calories.toFixed(2)}</p>
+                            <p>Fat : {recipe.totalNutrients.FAT.quantity.toFixed(2)}g </p>
+                            <p>Sugars : {recipe.totalNutrients.SUGAR.quantity.toFixed(2)}g</p>
+                            <p>Protien : {recipe.totalNutrients.PROCNT.quantity.toFixed(2)}g</p>
+                            <p>Carbs : {recipe.totalNutrients.CHOCDF.quantity.toFixed(2)}g</p>
                         </li>
                     );
 
