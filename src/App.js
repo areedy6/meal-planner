@@ -10,13 +10,14 @@ import Ingredient from './components/Ingredient';
 import Login from './pages/login'
 import { createBrowserHistory } from 'history';
 
+// OH NO CODE COMMENT HERE
 // Chris's code comment because we are cool
 
 function App() {
   const browserHistory = createBrowserHistory();
   return (
     <Router history={browserHistory}>
-      <div className="App">
+      <div className='App'>
         <Nav />
         <Route path="/" exact component={Recipes} />
         <Route path="/about" exact component={About} />
