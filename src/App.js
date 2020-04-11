@@ -10,7 +10,6 @@ import Ingredient from './components/Ingredient';
 import Login from './pages/login'
 import { createBrowserHistory } from 'history';
 
-// l;il change
 function App() {
   const browserHistory = createBrowserHistory();
   return (
