@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url ('food.jfif');
+  background: url ('food.jpg');
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
@@ -21,8 +21,8 @@ body {
 }
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   position: absolute;
   top: -50px;
@@ -34,18 +34,3 @@ h1 {
   padding: 0 0 20px;
 }
 
-/*https://unsplash.com/photos/4_jhDO54BYg
-
-
-/*#showcase {
-  background-image: url('https://unsplash.com/photos/4_jhDO54BYg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-}
-*/

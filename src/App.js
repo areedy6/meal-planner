@@ -7,7 +7,7 @@ import Route from 'react-router-dom/Route';
 import About from './components/About';
 import Contact from './components/Contact';
 import Ingredient from './components/Ingredient';
-import Login from './pages/login'
+import Login from './pages/Login'
 import { createBrowserHistory } from 'history';
 
 // OH NO CODE COMMENT HERE
