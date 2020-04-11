@@ -1,12 +1,12 @@
 import React from 'react';
 import './login.css';
-import avi from './avatar.png';
+import avatar from './avatar.png';
 import background from './food.jpg';
 
 function login() {
   return (
-    <div className='login box'>
-      <img src={avi} alt='avatar'/>
+    <div className='loginbox'>
+      <img src={avatar} alt='avatar'/>
       <img src={background} alt='food' />
       <h1>Login Here</h1>
       <form>
