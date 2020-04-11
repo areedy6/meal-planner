@@ -7,6 +7,7 @@ import Route from 'react-router-dom/Route';
 import About from './components/About';
 import Contact from './components/Contact';
 import Ingredient from './components/Ingredient';
+import MealPlan from './components/MealPlan';
 import { createBrowserHistory } from 'history';
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/ingredients/:label" exact component={Ingredient} />
+        <Route path="/mealplan" exact component={MealPlan} />
       </div>
     </Router>
   );

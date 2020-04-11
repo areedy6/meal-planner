@@ -11,8 +11,8 @@ function Contact() {
                     <li>Mobile</li>
                 </ul>
                 <ul>
-                    <li>gouravrecipe@gmail.com</li>
-                    <li>+914444455555</li>
+                    <li>areedy@gmail.com</li>
+                    <li>+2813308004</li>
                 </ul>
             </div>
         </div>

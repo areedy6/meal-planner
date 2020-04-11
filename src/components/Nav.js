@@ -5,13 +5,14 @@ function Nav() {
     return (
         <div className="Nav">
             <div className="leftNav">
-                <span><a href="/">Gourav Recipes</a></span>
+                <span><a href="/"></a></span>
             </div>
             <div className="rightNav">
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
+                    <li><a href="/mealplan">Meal Plan</a></li>
                 </ul>
             </div>
         </div>
