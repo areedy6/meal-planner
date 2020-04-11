@@ -9,17 +9,18 @@ import Contact from './components/Contact';
 import Ingredient from './components/Ingredient';
 import { createBrowserHistory } from 'history';
 
+// OH NO CODE COMMENT HERE
 
 function App() {
   const browserHistory = createBrowserHistory();
   return (
     <Router history={browserHistory}>
-      <div className="App">
+      <div className='App'>
         <Nav />
-        <Route path="/" exact component={Recipes} />
-        <Route path="/about" exact component={About} />
-        <Route path="/contact" exact component={Contact} />
-        <Route path="/ingredients/:label" exact component={Ingredient} />
+        <Route path='/' exact component={Recipes} />
+        <Route path='/about' exact component={About} />
+        <Route path='/contact' exact component={Contact} />
+        <Route path='/ingredients/:label' exact component={Ingredient} />
       </div>
     </Router>
   );
