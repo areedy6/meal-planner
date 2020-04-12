@@ -1,13 +1,11 @@
 import React from 'react';
 import './signup.css';
 import avatar from './avatar.png';
-import background from './food.jpg';
 
 function signup() {
   return (
     <div className='signupbox'>
-      <img src={avatar} alt='avatar'/>
-      <img src={background} alt='food' />
+      <img src={avatar} className='avatar'/>
       <h1>Sign Up</h1>
       <form>
         <p>Email</p>
