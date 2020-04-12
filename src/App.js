@@ -7,9 +7,12 @@ import Route from 'react-router-dom/Route';
 import About from './components/About';
 import Contact from './components/Contact';
 import Ingredient from './components/Ingredient';
+import Login from './pages/Login'
+import signup from './pages/signup'
 import { createBrowserHistory } from 'history';
 
 // OH NO CODE COMMENT HERE
+// Chris's code comment because we are cool
 
 function App() {
   const browserHistory = createBrowserHistory();
@@ -17,10 +20,12 @@ function App() {
     <Router history={browserHistory}>
       <div className='App'>
         <Nav />
-        <Route path='/' exact component={Recipes} />
-        <Route path='/about' exact component={About} />
-        <Route path='/contact' exact component={Contact} />
-        <Route path='/ingredients/:label' exact component={Ingredient} />
+        <Route path="/" exact component={Recipes} />
+        <Route path="/about" exact component={About} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/ingredients/:label" exact component={Ingredient} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/signup" exact component={signup} />
       </div>
     </Router>
   );
