@@ -1,11 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: url ("food.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("food.jpg") no-repeat center fixed;
   font-family: sans-serif;
 }
+
 
 .loginbox {
   width: 320px;
@@ -60,6 +59,8 @@ input[type="password"] {
 
 .loginbox input[type="submit"]
 {
+  padding-left: 2px;
+  padding-right: 2px;
   border: none;
   outline: none;
   height: 40px;

@@ -1,13 +1,13 @@
 import React from 'react';
 import './login.css';
 import avatar from './avatar.png';
-import background from './food.jpg';
+
 
 function login() {
   return (
     <div className='loginbox'>
-      <img src={avatar} alt='avatar'/>
-      <img src={background} alt='food' />
+      <img src={avatar} className='avatar'/>
+     
       <h1>Login Here</h1>
       <form>
         <p>Username</p>
