@@ -10,8 +10,6 @@ function signup() {
       <form>
         <p>Email</p>
         <input type="text" name="" placeholder="Enter Email" />
-        <p>Name</p>
-        <input type="Name" name="" placeholder="Name" />
         <p>Password</p>
         <input type="Password" name="" placeholder="Enter Password" />
         <input type="submit" name="" value="Sign Up" />
