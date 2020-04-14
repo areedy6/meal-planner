@@ -1,17 +1,17 @@
 const initialState = {
-  currentRecipe: {},
-  searched: 'pasta'
-}
+    currentRecipe: {},
+    searched: 'pasta',
+};
 
 const reducer = (state = initialState, action) => {
-  if (action.type === 'SET_RECIPE') {
-    return {
-      ...state,
-      currentRecipe: { ...action.currentRecipe },
-      searched: action.searched
+    if (action.type === 'SET_RECIPE') {
+        return {
+            ...state,
+            currentRecipe: { ...action.currentRecipe },
+            searched: action.searched,
+        };
     }
-  }
-  return { ...state }
+    return { ...state };
 }
 
-export default reducer
+export default reducer;
