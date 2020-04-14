@@ -1,14 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("food.jpg") no-repeat center fixed;
+  font-family: sans-serif;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+
 .Nav{
   height: 8vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(150deg,purple,pink);
+  background: linear-gradient(150deg,blue, skyblue);
   position: sticky;
   top:0;
   left:0;
