@@ -1,6 +1,15 @@
 const initialState = {
     currentRecipe: {},
     searched: 'pasta',
+    calendar: {
+        sunday: [],
+        monday: [],
+        tuesday: [],
+        wednesday: [],
+        thursday: [],
+        friday: [],
+        saturday: []
+    }
 };
 
 const reducer = (state = initialState, action) => {

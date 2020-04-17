@@ -11,15 +11,19 @@ function Ingredient() {
                 <img src={recipe.image} alt="..." />
             </div>
             <div className="list">
+                <h2>Instructions</h2> <a href={recipe.url} target="_blank">Instructions</a>
+
                 <h2>Ingredients</h2>
                 <ul className="ingredients">
                     {recipe.ingredients.map((value) => (
                         <li className="ingredientItem" key={Math.random()}>{value.text}</li>
                     ))}
+                
+               
                 </ul>
             </div>
 
-        </div >
+        </div>
     );
 }
 
