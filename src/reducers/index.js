@@ -1,15 +1,20 @@
+import { combineReducers } from 'redux';
+import calendar from './calendar';
+import food from './food';
+
+
 const initialState = {
     currentRecipe: {},
     searched: 'pasta',
-    calendar: {
-        sunday: [],
-        monday: [],
-        tuesday: [],
-        wednesday: [],
-        thursday: [],
-        friday: [],
-        saturday: []
-    }
+    // calendar: {
+    //     sunday: [],
+    //     monday: [],
+    //     tuesday: [],
+    //     wednesday: [],
+    //     thursday: [],
+    //     friday: [],
+    //     saturday: []
+    // }
 };
 
 const reducer = (state = initialState, action) => {
@@ -23,4 +28,9 @@ const reducer = (state = initialState, action) => {
     return { ...state };
 }
 
-export default reducer;
+export default combineReducers({
+    calendar,
+    food,
+    reducer
+  });
+  
