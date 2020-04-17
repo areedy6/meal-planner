@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { addRecipe, removeFromCalendar } from "../actions";
+import { addRecipe, removeFromCalendar } from "../../../../reducers/actions";
 import { connect } from 'react-redux';
 import { capitalize } from 'lodash';
 import CalendarIcon from 'react-icons/lib/fa/calendar-plus-o';
