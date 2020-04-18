@@ -1,14 +1,12 @@
 /* Design inspiration:  https://dribbble.com/shots/1978243-Latest-News */
 body, html {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #341cac;
+    font-family: 'Montserrat', sans-serif;   
   }
   
   .card {
     width: 280px;
     display: block;
     margin: 60px auto;
-    box-shadow: 10px 5px 40px 20px #2d1896;
     transition: .25s;
   }
   .card:hover {
@@ -67,7 +65,7 @@ body, html {
   .designer-link {
     color: #fff;
     text-align: center;
-    fon-size: 12px;
+    font-size: 12px;
     text-decoration: none;
     display: block;
   }
