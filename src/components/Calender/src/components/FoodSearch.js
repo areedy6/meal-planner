@@ -4,6 +4,7 @@ import { capitalize } from 'lodash';
 import FoodList from './FoodList';
 import ArrowRightIcon from 'react-icons/lib/fa/arrow-circle-right';
 import Loading from 'react-loading';
+import '../../index.css';
 
 const FoodSearch = ({ isLoading, selectRecipe, onInputChange, searchFood, food, day, meal, onClose }) => {
   return (

@@ -6,6 +6,7 @@ import CalendarIcon from 'react-icons/lib/fa/calendar-plus-o';
 import { fetchRecipes } from '../utils/api';
 import Modal from './Modal';
 import FoodSearch from "./FoodSearch";
+import '../../index.css';
 
 class App extends Component {
   state = {

@@ -72,7 +72,7 @@ function Recipes() {
                             <p>Sugars : {recipe.totalNutrients.SUGAR.quantity.toFixed(2)}g</p>
                             <p>Protien : {recipe.totalNutrients.PROCNT.quantity.toFixed(2)}g</p>
                             <p>Carbs : {recipe.totalNutrients.CHOCDF.quantity.toFixed(2)}g</p>
-                            <button type="submit">Add Recipe</button>
+                            {/* <button type="submit">Add Recipe</button> */}
                         </li>
                         
                     );

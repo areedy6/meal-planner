@@ -1,8 +1,8 @@
 import React from 'react';
+import './index.css';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import './index.css';
 import App from './components/Cal';
 import reducer from './reducers';
 import logger from 'redux-logger';

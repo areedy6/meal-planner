@@ -1,6 +1,8 @@
 import React from 'react';
 import './Recipes.css';
+
 import { useSelector } from 'react-redux';
+
 
 function Ingredient() {
     const recipe = useSelector(state => state.currentRecipe);
@@ -8,6 +10,7 @@ function Ingredient() {
         <div className="IngredientPage">
             <div className="image">
                 <h2>{recipe.label}</h2>
+                {/* console.log(recipe.label); */}
                 <img src={recipe.image} alt="..." />
             </div>
             <div className="list">

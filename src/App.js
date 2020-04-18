@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import Nav from './components/Nav/src/components/Cal';
+import Nav from './components/Nav';
 import Recipes from './components/Recipes';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import About from './components/About';
 import Contact from './components/Contact';
 import Ingredient from './components/Ingredient';
+import Calender from './components/Calender/src/components/Cal';
 import { createBrowserHistory } from 'history';
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/ingredients/:label" exact component={Ingredient} />
+        <Route path="/Calender" exact component={Calender} />
       </div>
     </Router>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import CloseIcon from 'react-icons/lib/fa/close';
+import '../../index.css';
 
 const AppModal = ({ isOpen, onClose, label, children }) => {
   return (
