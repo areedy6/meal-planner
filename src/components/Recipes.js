@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './Recipes.css';
 import Search from './Search';
+import Card from './Card'
 
 function Recipes() {
     const dispatch = useDispatch();
@@ -52,7 +53,7 @@ function Recipes() {
         }
     }
 
-    const handleIngredientClick = (recipe) => {
+    const handleIngredientClick = (recipe) => () => {
         dispatch({ type: 'SET_RECIPE', currentRecipe: { ...recipe }, searched: mainSearched });
     }
     return (
@@ -63,16 +64,16 @@ function Recipes() {
                 {recipeArr.map(({ recipe }) => {
                     return (
                         <li key={recipe.label} className="recipeItem">
-                            <h2>{recipe.label}</h2>
-                            <Link to={"/ingredients/" + recipe.label} onClick={() => handleIngredientClick(recipe)}>
-                                <img src={recipe.image} alt="..." />
-                            </Link>
+                            <Card image={recipe.image} title={recipe.label} btnClick={handleIngredientClick(recipe)}>
                             <p>Calories : {recipe.calories.toFixed(2)}</p>
                             <p>Fat : {recipe.totalNutrients.FAT.quantity.toFixed(2)}g </p>
                             <p>Sugars : {recipe.totalNutrients.SUGAR.quantity.toFixed(2)}g</p>
                             <p>Protien : {recipe.totalNutrients.PROCNT.quantity.toFixed(2)}g</p>
                             <p>Carbs : {recipe.totalNutrients.CHOCDF.quantity.toFixed(2)}g</p>
-                        </li>
+                        
+                            </Card>
+                            
+                            </li>
                     );
 
                 })}
