@@ -13,11 +13,9 @@ function login () {
         <input type='text' name='' placeholder='Enter Username' />
         <p>Password</p>
         <input type='password' name='' placeholder='Password' />
-        <input type='submit' name='' value='Login' />
+        <a href='/login' id='login-button' class='login-button'>Login</a>
         <br />
-        <a href='#'>Lost your password?</a>
-        <br />
-        <a href='#'>Don't have an account?</a>
+        <a href='/signup' id='signup-button' class='signup-button'>Don't have an account?</a>
       </form>
     </div>
   )
