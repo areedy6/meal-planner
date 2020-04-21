@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { loginUser } from "../../actions/authActions";
-import classnames from "classnames";
+import { loginUser } from '../../actions/authAction'
+import classnames from 'classnames'
 import './login.css'
 import avatar from './avatar.png'
 
@@ -21,13 +21,13 @@ class Login extends Component {
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push('/');
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push('/');
     }
 
     if (nextProps.errors) {
@@ -52,14 +52,26 @@ class Login extends Component {
     this.props.loginUser(userData);
   }
 
-function login () {
+render () {
   const { errors } = this.state;
-  return (
-    <div className='loginbox'>
-      <img src={avatar} className='avatar' />
 
-      <h1>Login Here</h1>
-      <form noValidate onSubmit={this.onSubmit}>
+    return (
+      <div className="container">
+        <div style={{ marginTop: "4rem" }} className="row">
+          <div className="col s8 offset-s2">
+            <Link to="/" className="btn-flat waves-effect">
+              <i className="material-icons left">keyboard_backspace</i> Back to
+              home
+            </Link>
+            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+              <h4>
+                <b>Login</b> below
+              </h4>
+              <p className="grey-text text-darken-1">
+                Don't have an account? <Link to="/register">Register</Link>
+              </p>
+            </div>
+            <form noValidate onSubmit={this.onSubmit}>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
@@ -109,8 +121,11 @@ function login () {
                 </button>
               </div>
             </form>
-    </div>
-  )
+          </div>
+        </div>
+      </div>
+    )
+}
 }
 
 Login.propTypes = {
@@ -127,7 +142,7 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { loginUser }
-)(login)
+)(Login)
 
 {/* <form>
         <p>Username</p>
