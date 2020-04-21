@@ -17,8 +17,7 @@ function Ingredient() {
                         <li className="ingredientItem" key={Math.random()}>{value.text}</li>
                     ))}
                 </ul>
-            </div>
-
+            </div>            
         </div >
     );
 }
