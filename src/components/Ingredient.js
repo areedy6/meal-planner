@@ -1,6 +1,7 @@
 import React from 'react';
 import './Recipes.css';
 import { useSelector } from 'react-redux';
+// import Card from './Card'
 
 function Ingredient() {
     const recipe = useSelector(state => state.currentRecipe);
