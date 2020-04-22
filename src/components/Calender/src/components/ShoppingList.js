@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ShoppingList = ({ list }) => {
+  console.log('azzzz')
   return (
     <div className='ingredients-list'>
       <h3 className='subheader'>

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { capitalize } from 'lodash';
 import CalendarIcon from 'react-icons/lib/fa/calendar-plus-o';
 import { fetchRecipes } from '../utils/api';
+import ShoppingList from './ShoppingList';
 import Modal from './Modal';
 import FoodSearch from "./FoodSearch";
 import '../../index.css';
@@ -110,7 +111,7 @@ class App extends Component {
                       ? <div className='food-item'>
                         <img src={meals[meal].image} alt={meals[meal].label}/>
                         <span title={meals[meal].label}>{meals[meal].label}</span>
-                        { console.log(meals[meal].url) }
+                        {/* { console.log(meals[meal].url) } */}
 
                         {/* <button onClick={() => meals[meal].url} >Instructions</button> */}
                         <a href={meals[meal].url} target="_blank">Instructions</a>
@@ -142,7 +143,7 @@ class App extends Component {
         </Modal>
 
         <Modal label="Shopping List Modal" isOpen={isIngredientsModalOpen} onClose={this.closeIngredientsModal}>
-          {/* <ShoppingList list={this.generateShoppingList()}/> */}
+          <ShoppingList list={this.generateShoppingList()}/>
         </Modal>
       </div>
     );

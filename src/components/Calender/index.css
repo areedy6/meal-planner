@@ -12,6 +12,10 @@ li {
   list-style-type: none;
 }
 
+a {
+  font-size: 14px;
+  color: rgba(0,0,0,.85);
+}
 .container {
   margin: 0 auto;
   width: 1070px;
