@@ -53,6 +53,7 @@ function Recipes() {
     }
 
     const handleIngredientClick = (recipe) => {
+        console.log("zzzz")
         dispatch({ type: 'SET_RECIPE', currentRecipe: { ...recipe }, searched: mainSearched });
     }
     return (

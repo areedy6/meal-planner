@@ -6,15 +6,7 @@ import food from './food';
 const initialState = {
     currentRecipe: {},
     searched: 'pasta',
-    // calendar: {
-    //     sunday: [],
-    //     monday: [],
-    //     tuesday: [],
-    //     wednesday: [],
-    //     thursday: [],
-    //     friday: [],
-    //     saturday: []
-    // }
+
 };
 
 const reducer = (state = initialState, action) => {
@@ -31,6 +23,6 @@ const reducer = (state = initialState, action) => {
 export default combineReducers({
     calendar,
     food,
-    reducer
+    recipes: reducer
   });
   

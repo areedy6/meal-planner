@@ -110,6 +110,10 @@ class App extends Component {
                       ? <div className='food-item'>
                         <img src={meals[meal].image} alt={meals[meal].label}/>
                         <span title={meals[meal].label}>{meals[meal].label}</span>
+                        { console.log(meals[meal].url) }
+
+                        {/* <button onClick={() => meals[meal].url} >Instructions</button> */}
+                        <a href={meals[meal].url} target="_blank">Instructions</a>
                         <button onClick={() => remove({meal, day})}>Clear</button>
                       </div>
                       : <div className='add-meal-btn'>
