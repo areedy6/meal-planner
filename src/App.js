@@ -11,9 +11,6 @@ import Login from './pages/Login'
 import signup from './pages/signup'
 import { createBrowserHistory } from 'history';
 
-// OH NO CODE COMMENT HERE
-// Chris's code comment because we are cool
-
 function App() {
   const browserHistory = createBrowserHistory();
   return (
