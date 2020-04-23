@@ -64,11 +64,12 @@ function Recipes() {
                 {recipeArr.map(({ recipe }) => {
                     return (
                         <li key={recipe.label} className="recipeItem">
-                            <Card image={recipe.image} title={recipe.label} btnClick={handleIngredientClick(recipe)}>
+                           
+                            <Card image={recipe.image} title={recipe.label} recipe = {recipe} ingredientView = {true}> 
                             <p>Calories : {recipe.calories.toFixed(2)}</p>
                             <p>Fat : {recipe.totalNutrients.FAT.quantity.toFixed(2)}g </p>
                             <p>Sugars : {recipe.totalNutrients.SUGAR.quantity.toFixed(2)}g</p>
-                            <p>Protien : {recipe.totalNutrients.PROCNT.quantity.toFixed(2)}g</p>
+                            <p>Protein : {recipe.totalNutrients.PROCNT.quantity.toFixed(2)}g</p>
                             <p>Carbs : {recipe.totalNutrients.CHOCDF.quantity.toFixed(2)}g</p>
                         
                             </Card>

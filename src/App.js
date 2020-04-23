@@ -23,7 +23,7 @@ function App() {
         <Route path="/" exact component={Recipes} />
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />
-        <Route path="/ingredients/:label" exact component={Ingredient} />
+        <Route path="/ingredients" exact component={Ingredient} />
         <Route path="/login" exact component={Login} />
         <Route path="/signup" exact component={signup} />
       </div>

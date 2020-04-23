@@ -189,7 +189,7 @@ body{
 }
 
 /* Design inspiration:  https://dribbble.com/shots/1978243-Latest-News */
-/* body, html {
+body, html {
     font-family: 'Montserrat', sans-serif;   
   }
   
@@ -258,5 +258,5 @@ body{
     font-size: 12px;
     text-decoration: none;
     display: block;
-  } */
+  } 
   

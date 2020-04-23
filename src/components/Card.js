@@ -4,7 +4,7 @@ import './card.css'
 
   class Card extends React.Component {
     render() {
-      const { image, headerTxt, title, children, btnClick } = this.props;
+      const { image, headerTxt, title, children, recipe, ingredientView } = this.props;
       const style = { 
           backgroundImage: 'url(' + image + ')',
       };
@@ -17,10 +17,11 @@ import './card.css'
             
             <h2>{title}</h2>
             
-            <p className="body-content">{children}</p>
-            <Link to={"/ingredients/" + title} onClick={btnClick}>
+            <div className="body-content">{children}</div>
+            <Link to={ingredientView?{pathname: "/ingredients/", state: {recipe}}:"/"}>
               <button className="button button-primary">
-                Find out more
+                {ingredientView 
+                ? "Find out more": "back to recipes"}
               </button>
             </Link>
           </div>
