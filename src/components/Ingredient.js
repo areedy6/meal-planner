@@ -3,14 +3,15 @@ import './Recipes.css';
 import { useSelector } from 'react-redux';
 import { connect } from 'react-redux';
 import { reducer } from '../reducers/index'
-
+import Card from './Card.js';
 
 function Ingredient(props) {
     {console.log(props)} 
     const recipe = props.currentRecipe;
     
     return (
-        <div className="IngredientPage">
+       
+       <div className="IngredientPage">
             <div className="image">
                  <h2>{recipe.label}</h2>
                 

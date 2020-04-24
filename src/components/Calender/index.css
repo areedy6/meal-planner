@@ -18,7 +18,10 @@ a {
 }
 .container {
   margin: 0 auto;
+  /* padding: 0px, 100px; */
   width: 1070px;
+  background-color: white;
+  opacity: .9;
 }
 
 .header {
@@ -28,6 +31,8 @@ a {
 }
 
 .subheader {
+  /* margin-right: 100px; */
+  padding: 25px;
   font-size: 30px;
   font-weight: 300;
 }
@@ -36,6 +41,8 @@ a {
   background: none;
   border: none;
   border-radius: 2px;
+  
+  
 }
 
 .icon-btn:hover, .icon-btn:focus, .icon-btn:active {
@@ -47,6 +54,7 @@ a {
   width: 50px;
   margin: 0 auto;
 }
+
 
 .nav {
   display: flex;
@@ -77,12 +85,15 @@ a {
   margin-top: 0;
   display: flex;
   padding: 0 20px;
+  background-color: white;
+  opacity: .9;
 }
 
 .icon-grid ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
 }
 
 .icon-grid {
@@ -95,6 +106,8 @@ a {
   margin: 0;
   margin-left: 152px;
   padding: 0 20px;
+  background-color: white;
+  opacity: .9;
 }
 
 .meal {
@@ -104,12 +117,14 @@ a {
   height: 150px;
   width: 160px;
   justify-content: center;
+  margin: 100px, 25px;
+
 }
 
 .meal svg {
-  margin: 0 auto;
+  margin: 0px auto;
   display: block;
-  margin-top: 15px;
+  /* margin-top: 100px; */
   cursor: pointer;
 }
 
@@ -137,6 +152,7 @@ a {
   border-radius: 3px;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,.24), 0 3px 12px 0 rgba(0,0,0,.12);
   min-width: 500px;
+  
 }
 
 .search-container h3 {
@@ -162,6 +178,15 @@ a {
 
 .days h3 {
   padding: 50px 0;
+  /* margin-top: 50px; */
+  font-size: 35px;
+  font: bold;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 160px;
+  justify-content: center;
+
 }
 
 .food-list {
