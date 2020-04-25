@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.router
+const router = express.Router()
 const bcrypt = require('bcryptjs')
 const config = require('config')
 const jwt = require('jsonwebtoken')
@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken')
 const User = require('../../models/User')
 
 // Post route for Authentication
-router.post('/', (req, res) => {
+module.exports = router.post('/', (req, res) => {
   const { name, email, password } = req.body
 
   // Validation
@@ -46,5 +46,3 @@ router.post('/', (req, res) => {
     )
 }
 )
-
-module.export = router

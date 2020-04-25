@@ -1,5 +1,5 @@
 import axios from 'axios'
-import from { returnErrors } from './errorActions'
+import { returnErrors } from './errorActions'
 
 import {
   USER_LOADED,
@@ -11,15 +11,20 @@ import {
   REGISTER_SUCCESS,
   REGISTER_FAIL
 } from '../actions/types'
-import { returnErrors } from './errorActions'
 
 // Checks tokens and loads user
 export const loadUser = () => (dispatch, getState) => {
   // Changes state to loading
   dispatch({ type: USER_LOADING })
 
+  let token
+
   // Grabs token from localStorage
-  const token = getState().auth.token
+  if (getState().auth) {
+    token = getState().auth.token
+  } else {
+    token = ''
+  }
 
   const config = {
     headers: {
@@ -59,4 +64,3 @@ export const tokenConfig = getState => {
 
   return config
 }
-

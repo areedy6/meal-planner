@@ -2,15 +2,15 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const config = require('config')
-
-const meals = require('./routes/api/meals')
+const Bodyparser = require('body-parser')
+// const meals = require('./routes/api/meals')
 const users = require('./routes/api/users')
 const auth = require('./routes/api/auth')
 
 const app = express()
 
 // Bodyparser middleware
-app.use(express.json())
+app.use(Bodyparser.json())
 
 // DB Config
 const db = config.get('mongoURI')
@@ -24,7 +24,7 @@ mongoose.connect(db, {
   .catch(err => console.log(err))
 
 // Routes
-app.use('/api/meals', meals)
+// app.use('/api/meals', meals)
 app.use('/api/users', users)
 app.use('/api/auth', auth)
 

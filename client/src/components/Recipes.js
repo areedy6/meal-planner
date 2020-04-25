@@ -11,7 +11,8 @@ function Recipes () {
   const [mainSearched, setMainSearched] = useState(searchedValue)
   const [veg, setVeg] = useState(true)
   const [recipeArr, setRecipeArr] = useState([])
-  const app_id = 'abf008f3'; const app_key = '0aecda60dcf1b8a39109d3afa689f6ff'
+  const app_id = 'abf008f3'
+  const app_key = '0aecda60dcf1b8a39109d3afa689f6ff'
   const url = `https://api.edamam.com/search?q=${mainSearched}&app_id=${app_id}&app_key=${app_key}`
   useEffect(() => {
     getData()

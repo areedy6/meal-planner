@@ -9,6 +9,7 @@ import {
   REGISTER_FAIL
 } from '../actions/types'
 
+const localStorage = window.localStorage
 const initialState = {
   token: localStorage.getItem('token'),
   isAuthenticated: null,

@@ -1,6 +1,11 @@
+import { combineReducers } from 'redux'
+import calendar from './calendar'
+import food from './food'
+
 const initialState = {
   currentRecipe: {},
   searched: 'pasta'
+
 }
 
 const reducer = (state = initialState, action) => {
@@ -14,4 +19,8 @@ const reducer = (state = initialState, action) => {
   return { ...state }
 }
 
-export default reducer
+export default combineReducers({
+  calendar,
+  food,
+  recipes: reducer
+})
