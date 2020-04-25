@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './App.css'
 import Nav from './components/Nav'
 import Recipes from './components/Recipes'
@@ -10,7 +10,13 @@ import Ingredient from './components/Ingredient'
 import Login from './pages/Login'
 import signup from './pages/signup'
 import { createBrowserHistory } from 'history'
+import { loadUser } from './actions/authActions'
 
+class App extends Component {
+  componentDidMount() {
+    store.dispatch(loadUser())
+  }
+}
 
 function App () {
   const browserHistory = createBrowserHistory()

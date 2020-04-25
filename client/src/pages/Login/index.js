@@ -94,7 +94,3 @@ export default connect(
   { loginUser }
 )(Login)
 
-
-
-     
-    

@@ -1,42 +1,41 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const passport = require('passport')
+const path = require('path')
+const config = require('config')
+
+const meals = require('./routes/api/meals')
 const users = require('./routes/api/users')
+const auth = require('./routes/api/auth')
 
 const app = express()
 
 // Bodyparser middleware
-app.use(
-  bodyParser.urlencoded({
-    extended: false
-  })
-)
-app.use(bodyParser.json())
+app.use(express.json())
 
 // DB Config
-// const db = require('./config/keys').mongoURI
-
-const MONGO_DBURI = 'mongodb+srv://larsenr12:Password123@cluster0-rfzcr.mongodb.net/test?retryWrites=true&w=majority'
+const db = config.get('mongoURI')
 
 // Connect to MongoDB
-mongoose.connect(MONGO_DBURI || 'mongodb://localhost/mealPlan', {
+mongoose.connect(db, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useCreateIndex: true
 })
-
-mongoose.connection.on('connected', () => {
-  console.log('Mongoose is connected')
-})
-
-// Passport middleware
-app.use(passport.initialize())
-
-// Passport config
-require('./config/passport')(passport)
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err))
 
 // Routes
+app.use('/api/meals', meals)
 app.use('/api/users', users)
+app.use('/api/auth', auth)
+
+if (process.env.NODE_ENV === 'production') {
+  // Sets a static folder
+  app.use(express.static('client/build'))
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 const port = process.env.PORT || 3000
 

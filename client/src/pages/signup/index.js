@@ -6,18 +6,24 @@ import { registerUser } from '../../actions/authAction'
 import classnames from 'classnames'
 import './signup.css'
 import avatar from './avatar.png'
+import PropTypes from 'prop-types'
+import { static } from 'express'
 
-class Register extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "",
-      email: "",
-      password: "",
-      password2: "",
-      errors: {}
-    };
+
+class registerModal extends Component {
+  state = {
+    modal: false,
+    name: '',
+    email: '',
+    password: '',
+    msg: null
   }
+}
+
+static propTypes = {
+  isAuthenticated: PropTypes.bool,
+  error: PropTypes.object.isRequired
+}
 
   componentDidMount() {
     if (this.props.auth && this.props.auth.isAuthenticated) {
@@ -83,23 +89,11 @@ Register.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  auth: state.auth,
+  isAuthenticated: state.auth.isAuthenticated,
   errors: state.errors
 })
 
 export default connect(
   mapStateToProps,
-  { registerUser }
-)(withRouter(Register))
-
- /* <form>
-        <p>Email</p>
-        <input id='email-input' type='text' name='' placeholder='Enter Email' />
-        <p>Password</p>
-        <input id='password-input' type='Password' name='' placeholder='Enter Password' />
-        <input type='submit' name='' value='Sign Up' />
-        <br />
-        <a href='#'>Lost your password?</a>
-        <br />
-        <a href='#'>Don't have an account?</a>
-      </form> */ 
+  { }
+)(registerModal)
