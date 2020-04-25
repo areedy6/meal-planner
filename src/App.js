@@ -8,6 +8,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Ingredient from './components/Ingredient';
 import MealPlan from './components/MealPlan';
+import Calender from './components/Calender/src/components/Cal';
 import { createBrowserHistory } from 'history';
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" exact component={Contact} />
         <Route path="/ingredients/:label" exact component={Ingredient} />
         <Route path="/mealplan" exact component={MealPlan} />
+        <Route path="/Calender" exact component={Calender} />
       </div>
     </Router>
   );

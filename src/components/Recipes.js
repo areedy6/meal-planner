@@ -21,7 +21,7 @@ function Recipes() {
     const getData = async () => {
         const res = await fetch(url);
         const data = await res.json();
-        // console.log(data);
+        console.log(data);
         let temp;
         if (veg === true) {
             temp = data.hits.filter((value) => {
@@ -72,8 +72,11 @@ function Recipes() {
                             <p>Sugars : {recipe.totalNutrients.SUGAR.quantity.toFixed(2)}g</p>
                             <p>Protien : {recipe.totalNutrients.PROCNT.quantity.toFixed(2)}g</p>
                             <p>Carbs : {recipe.totalNutrients.CHOCDF.quantity.toFixed(2)}g</p>
+                            {/* <button type="submit">Add Recipe</button> */}
                         </li>
+                        
                     );
+                    
 
                 })}
             </ul>
