@@ -11,8 +11,7 @@ function Recipes () {
   const [mainSearched, setMainSearched] = useState(searchedValue)
   const [veg, setVeg] = useState(true)
   const [recipeArr, setRecipeArr] = useState([])
-  const app_id = 'abf008f3'
-  const app_key = '0aecda60dcf1b8a39109d3afa689f6ff'
+  const app_id = 'abf008f3'; const app_key = '0aecda60dcf1b8a39109d3afa689f6ff'
   const url = `https://api.edamam.com/search?q=${mainSearched}&app_id=${app_id}&app_key=${app_key}`
   useEffect(() => {
     getData()
@@ -21,7 +20,7 @@ function Recipes () {
   const getData = async () => {
     const res = await fetch(url)
     const data = await res.json()
-    // console.log(data);
+    console.log(data)
     let temp
     if (veg === true) {
       temp = data.hits.filter((value) => {
@@ -73,7 +72,9 @@ function Recipes () {
               <p>Sugars : {recipe.totalNutrients.SUGAR.quantity.toFixed(2)}g</p>
               <p>Protien : {recipe.totalNutrients.PROCNT.quantity.toFixed(2)}g</p>
               <p>Carbs : {recipe.totalNutrients.CHOCDF.quantity.toFixed(2)}g</p>
+              {/* <button type="submit">Add Recipe</button> */}
             </li>
+
           )
         })}
       </ul>

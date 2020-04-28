@@ -17,6 +17,8 @@ export const loadUser = () => (dispatch, getState) => {
   // Changes state to loading
   dispatch({ type: USER_LOADING })
 
+  // Register User
+
   let token
 
   // Grabs token from localStorage

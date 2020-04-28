@@ -7,18 +7,13 @@ import Route from 'react-router-dom/Route'
 import About from './components/About'
 import Contact from './components/Contact'
 import Ingredient from './components/Ingredient'
-import Login from './pages/Login'
-import signup from './pages/signup'
+import Calender from './components/Cal'
+import Login from './pages/Login/login'
+import signup from './pages/signup/signup'
 import { createBrowserHistory } from 'history'
 import { Provider } from 'react-redux'
 import { loadUser } from './actions/authActions'
-import { Store } from 'express-session'
 import store from './components/store'
-// class App extends Component {
-//   componentDidMount () {
-//     store.dispatch(loadUser())
-//   }
-// }
 
 const App = () => {
   useEffect(() => {
@@ -36,6 +31,7 @@ const App = () => {
           <Route path='/about' exact component={About} />
           <Route path='/contact' exact component={Contact} />
           <Route path='/ingredients/:label' exact component={Ingredient} />
+          <Route path='/Calender' exact component={Calender} />
           <Route path='/login' exact component={Login} />
           <Route path='/signup' exact component={signup} />
         </div>

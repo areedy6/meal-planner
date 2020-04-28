@@ -3,55 +3,7 @@ import React from 'react'
 import './login.css'
 import avatar from './avatar.png'
 
-// class Login extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       email: "",
-//       password: "",
-//       errors: {}
-//     };
-//   }
-
-// If logged in and user navigates to Login page, should redirect them to dashboard
-// componentDidMount() {
-//   if (this.props.auth && this.props.auth.isAuthenticated) {
-//     this.props.history.push('/');
-//   } else {
-//     console.log('broke')
-//   }
-// }
-
-// componentWillReceiveProps(nextProps) {
-//   if (nextProps.auth && nextProps.auth.isAuthenticated) {
-//     this.props.history.push('/');
-//   }
-
-//   if (nextProps.errors) {
-//     this.setState({
-//       errors: nextProps.errors
-//     });
-//   }
-// }
-
-// onChange = e => {
-//   this.setState({ [e.target.id]: e.target.value });
-// };
-
-// onSubmit = e => {
-//   e.preventDefault();
-
-//   const userData = {
-//     email: this.state.email,
-//     password: this.state.password
-//   };
-
-//   this.props.loginUser(userData);
-// }
-
 function login () {
-  // const { errors } = this.state;
-
   return (
     <div className='loginbox'>
       <img src={avatar} className='avatar' />
@@ -71,16 +23,5 @@ function login () {
     </div>
   )
 }
-
-// Login.propTypes = {
-//   loginUser: PropTypes.func.isRequired,
-//   auth: PropTypes.object.isRequired,
-//   errors: PropTypes.object.isRequired
-// // }
-
-// const mapStateToProps = state => ({
-//   auth: state.auth,
-//   errors: state.errors
-// })
 
 export default login
