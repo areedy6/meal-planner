@@ -7,13 +7,16 @@ import Route from 'react-router-dom/Route'
 import About from './components/About'
 import Contact from './components/Contact'
 import Ingredient from './components/Ingredient'
-import Calender from './components/Cal'
-import Login from './pages/Login/login'
-import signup from './pages/signup/signup'
+// import Calender from './components/Cal'
+import Calender from './components/Calender/src/components/Cal';
+import Login from './components/pages/Login/login'
+import signup from './components/pages/signup/signup'
 import { createBrowserHistory } from 'history'
 import { Provider } from 'react-redux'
 import { loadUser } from './actions/authActions'
 import store from './components/store'
+
+
 
 const App = () => {
   useEffect(() => {
@@ -27,13 +30,13 @@ const App = () => {
       <Provider store={store}>
         <div className='App'>
           <Nav />
-          <Route path='/' exact component={Recipes} />
-          <Route path='/about' exact component={About} />
-          <Route path='/contact' exact component={Contact} />
-          <Route path='/ingredients/:label' exact component={Ingredient} />
-          <Route path='/Calender' exact component={Calender} />
-          <Route path='/login' exact component={Login} />
-          <Route path='/signup' exact component={signup} />
+           <Route path="/" exact component={About} />
+            <Route path="/recipes" exact component={Recipes} />
+            <Route path="/contact" exact component={Contact} />
+            <Route path="/ingredients/:label" exact component={Ingredient} />
+            <Route path="/Calender" exact component={Calender} />
+            <Route path="/login" exact component={Login} />
+            <Route path="/signup" exact component={signup} />
         </div>
       </Provider>
     </Router>

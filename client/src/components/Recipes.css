@@ -13,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     margin:10px;
+    /* background-color: aliceblue; */
 }
 
 .Search input[type="text"]{
@@ -37,12 +38,16 @@ body{
 .Search input[type="checkbox"]{
     margin:5px;
     zoom:2;
+    
 }
 
 .checkboxInput{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    opacity: .9;
+    
 }
 
 /*Recipes*/

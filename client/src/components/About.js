@@ -1,14 +1,18 @@
 import React from 'react'
 import './Recipes.css'
+import { Link } from 'react-router-dom'
 
 function About () {
   return (
     <div className='container'>
       <h2 className='heading'>About Us</h2>
       <div className='about'>
-        <p>We, at this recipes company, add a taste of peace to consumers. We love to embrace our users with every recipe of their choice with our effort to make user experience the better of the best.</p>
-        <p>We established this journey with hopes to make interaction fun and promising. We have been successful in crafting its 1-year anniversary</p>
-        <p>We would be glad with you to continue this path</p>
+        <p>Welcome to our Meal Planner. Using our search engine enter the featured ingredient you have handy to explore a wide variety of recipes that put that element to culinary usage.</p>
+        <br />
+        <p>Using our Calendar feature you will also be able to customize a Calendar of meals for your week-to-week diet</p>
+        <p></p>
+        <br />
+        <li><Link to="/recipes">Lets get started!</Link></li> 
       </div>
     </div>
   )

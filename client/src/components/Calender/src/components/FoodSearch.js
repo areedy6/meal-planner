@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { capitalize } from 'lodash'
-import FoodList from './FoodList'
-import ArrowRightIcon from 'react-icons/lib/fa/arrow-circle-right'
-import Loading from 'react-loading'
-import '../index.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { capitalize } from 'lodash';
+import FoodList from './FoodList';
+import ArrowRightIcon from 'react-icons/lib/fa/arrow-circle-right';
+import Loading from 'react-loading';
+import '../../index.css';
 
 const FoodSearch = ({ isLoading, selectRecipe, onInputChange, searchFood, food, day, meal, onClose }) => {
   return (
@@ -27,9 +27,8 @@ const FoodSearch = ({ isLoading, selectRecipe, onInputChange, searchFood, food, 
               />
               <button
                 className='icon-btn'
-                onClick={searchFood}
-              >
-                <ArrowRightIcon size={30} />
+                onClick={searchFood}>
+                <ArrowRightIcon size={30}/>
               </button>
             </div>
             {
@@ -37,16 +36,17 @@ const FoodSearch = ({ isLoading, selectRecipe, onInputChange, searchFood, food, 
                 <FoodList
                   food={food}
                   onSelect={(recipe) => {
-                    selectRecipe({ recipe, day, meal })
-                    onClose()
+                    selectRecipe({ recipe, day, meal });
+                    onClose();
                   }}
                 />
               )
             }
-            </div>}
+          </div>
+        }
       </div>
     </div>
-  )
+  );
 };
 FoodSearch.propTypes = {
   isLoading: PropTypes.bool,
@@ -56,6 +56,6 @@ FoodSearch.propTypes = {
   food: PropTypes.array,
   day: PropTypes.string,
   meal: PropTypes.string,
-  onClose: PropTypes.func
-}
-export default FoodSearch
+  onClose: PropTypes.func,
+};
+export default FoodSearch;
