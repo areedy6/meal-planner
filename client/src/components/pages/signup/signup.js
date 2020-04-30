@@ -33,7 +33,7 @@ onSubmit = e => {
   
 
   axios ({
-    url: '',
+    url: '/api/users',
     method: 'POST',
     data: payload
   })
@@ -46,21 +46,25 @@ onSubmit = e => {
 }
 
 render () {
-  const { username, password } = this.state;
+  console.log('State', this.state)
   return (
     <div className='signupbox'>
       <img src={avatar} className='avatar' />
       <h1>Sign Up</h1>
       <form OnSubmit={this.onSubmit}>
         <p>Sign Up With Email </p>
-        <input id='name' type='text' name='name' placeholder='Enter Email' value={this.state.username}
+        <input type='text' name='username' placeholder='Enter Email' value={this.state.username}
             onChange={this.onChange}
             required />
         <p>Password </p>
-        <input type='Password' name='' placeholder='Enter Password' value={this.state.password}
+        <input 
+         type='password'
+         name='password'
+         placeholder='Enter Password' 
+         value={this.state.password}
             onChange={this.onChange}
             required  />
-        <input type='submit' name='' value='Sign Up' />
+        <input type='submit' />
         <br />
         <br />
       </form>

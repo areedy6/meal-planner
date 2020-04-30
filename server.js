@@ -6,6 +6,7 @@ const Bodyparser = require('body-parser')
 // const meals = require('./routes/api/meals')
 const users = require('./routes/api/users')
 const auth = require('./routes/api/auth')
+const cors = require('cors')
 
 const app = express()
 
@@ -23,6 +24,7 @@ mongoose.connect(db, {
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err))
 
+app.use(cors())
 // Routes
 // app.use('/api/meals', meals)
 app.use('/api/users', users)

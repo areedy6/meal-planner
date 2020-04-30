@@ -8,8 +8,8 @@ const jwt = require('jsonwebtoken')
 const User = require('../../models/User')
 
 // Post route for Authentication
-module.exports = router.post('/login', (req, res) => {
-  const { name, email, password } = req.body
+module.exports = router.post('/auth', (req, res) => {
+  const { email, password } = req.body
 
   // Validation
   if (!email || !password) {

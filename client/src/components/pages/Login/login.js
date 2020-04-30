@@ -34,7 +34,7 @@ class Login extends Component {
     
 
     axios ({
-      url: '',
+      url: '/api/auth',
       method: 'POST',
       data: payload
     })
