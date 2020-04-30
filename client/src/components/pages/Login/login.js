@@ -45,16 +45,21 @@ class Login extends Component {
 
 
   render () {
+    const { username, password, message } = this.state;
   return (
     <div className='loginbox'>
       <img src={avatar} className='avatar' />
 
       <h1>Login Here</h1>
-      <form>
+      <form onSubmit={this.onSubmit}>
         <p>Enter Email</p>
-        <input type='text' name='' placeholder='Enter Email' />
+        <input type='text' name='' placeholder='Enter Email' value={this.username}
+            onChange={this.onChange}
+            required />
         <p>Password</p>
-        <input type='password' name='' placeholder='Password' />
+        <input type='password' name='' placeholder='Password' value={this.password}
+           onChange={this.onChange}
+            required />
         <input type='submit' name='' value='Login' />
         <br />
         <a href='#'>Lost your password?</a>

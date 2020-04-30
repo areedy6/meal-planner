@@ -31,15 +31,20 @@ class Signup extends Component {
 
 
 render () {
+  const { username, password } = this.state;
   return (
     <div className='signupbox'>
       <img src={avatar} className='avatar' />
       <h1>Sign Up</h1>
-      <form>
+      <form OnSubmit={this.onSubmit}>
         <p>Sign Up With Email </p>
-        <input id='name' type='text' name='name' placeholder='Enter Email' />
+        <input id='name' type='text' name='name' placeholder='Enter Email' value={username}
+            onChange={this.onChange}
+            required />
         <p>Password </p>
-        <input type='Password' name='' placeholder='Enter Password' />
+        <input type='Password' name='' placeholder='Enter Password' value={password}
+            onChange={this.onChange}
+            required  />
         <input type='submit' name='' value='Sign Up' />
         <br />
         <br />

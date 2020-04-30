@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://larsenr12:Password123@cluster0-rfzcr.mongodb.net/test?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://larsenr12:Password123!@cluster0-ol2vf.mongodb.net/test?retryWrites=true&w=majority",
     "jwtSecret": "mealPlanSecret"
 }
