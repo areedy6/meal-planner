@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken')
 const User = require('../../models/User')
 
 // Post route for new users
-module.exports = router.post('/', (req, res) => {
+module.exports = router.post('/signup', (req, res) => {
   const { name, email, password } = req.body
 
   // Validation

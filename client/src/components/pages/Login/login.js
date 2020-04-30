@@ -7,45 +7,48 @@ import { Link } from "react-router-dom";
 import signup from '../signup/signup'
 
 class Login extends Component {
-  constructor() {
-    super()
-    this.state = {
+
+    state = {
       username: "",
-      password: "",
-      message: ""
+      password: ""
     }
-  }
+  
 
   onChange = e => {
-    const state = this.state
-    state[e.target.name] = e.target.value
-    this.setState(state)
+    const target = e.target
+    const name = target.name
+    const value = target.value
+
+    this.setState({
+      [name]: value
+    })
   }
 
   onSubmit = e => {
     e.preventDefault()
 
-    const { username, password } = this.state
+    const payload = {
+      username: this.state.username,
+      password: this.state.password
+    }
+    
 
-    axios
-      .post("/api/auth/login", { username, password })
-      .then(result => {
-        localStorage.setItem("jwtToken", result.data.token)
-        this.setState({ message: "" })
-        this.props.history.push("/")
-      })
-      .catch(error => {
-        if (error.response.status === 401) {
-          this.setState({
-            message: "Login failed. Username or password does not match"
-          })
-        }
-      })
+    axios ({
+      url: '',
+      method: 'POST',
+      data: payload
+    })
+    .then(() => {
+      console.log('Payload has been sent to server')
+    })
+    .catch(() => {
+      console.log('Internal server error')
+    })
   }
 
 
   render () {
-    const { username, password, message } = this.state;
+  console.log('State', this.state)
   return (
     <div className='loginbox'>
       <img src={avatar} className='avatar' />
@@ -53,16 +56,15 @@ class Login extends Component {
       <h1>Login Here</h1>
       <form onSubmit={this.onSubmit}>
         <p>Enter Email</p>
-        <input type='text' name='' placeholder='Enter Email' value={this.username}
+        <input type='text' name='username' placeholder='Enter Email' value={this.state.username}
             onChange={this.onChange}
             required />
         <p>Password</p>
-        <input type='password' name='' placeholder='Password' value={this.password}
+        <input type='password' name='password' placeholder='Password' value={this.state.password}
            onChange={this.onChange}
             required />
-        <input type='submit' name='' value='Login' />
+        <input type='submit'/>
         <br />
-        <a href='#'>Lost your password?</a>
         <br />
         <Link to='/signup'>Don't have an account?</Link>
       </form>
