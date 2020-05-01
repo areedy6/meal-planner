@@ -9,7 +9,7 @@ function About () {
       <div className='about'>
         <p>Welcome to our Meal Planner. Using our search engine enter the featured ingredient you have handy to explore a wide variety of recipes that put that element to culinary usage.</p>
         <br />
-        <p>Using our Calendar feature you will also be able to customize a Calendar of meals for your week-to-week diet</p>
+        <p>Using our Calendar feature you will also be able to customize a Calendar of meals for your week-to-week diet.</p>
         <p />
         <br />
         <li><Link className='starting' to='/recipes'>Lets get started!</Link></li>
