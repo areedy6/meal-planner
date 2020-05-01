@@ -14,7 +14,7 @@ body {
 
 /* CORE STYLES */
 :root {
-  --primary-color: rgba(24, 39, 51 , 0.85);
+  --primary-color: rgba(24, 39, 51 , 0.90);
   --overlay-color: rgba(24, 39, 51 , 0.85);
   --menu-speed: 0.75s;
 }

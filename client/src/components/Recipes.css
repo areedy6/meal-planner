@@ -161,6 +161,13 @@ body{
     margin-bottom: 1.1rem;
 }
 
+
+.starting {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 275px;
+}
+
 @media(max-width:768px){
     .Search input[type="text"]{
         width:50vw;
