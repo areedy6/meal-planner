@@ -35,14 +35,27 @@ onSubmit = e => {
   axios ({
     url: '/api/users',
     method: 'POST',
-    data: payload
+    data: payload,
+    
   })
   .then(() => {
+    console.log('/api/users')
     console.log('Payload has been sent to server')
   })
-  .catch(() => {
-    console.log('Internal server error')
-  })
+  .catch(function (error) {
+    if (error.response) {
+      // Request made and server responded
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+    } else if (error.request) {
+      // The request was made but no response was received
+      console.log(error.request);
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      console.log('Error', error.message)
+    }
+})
 }
 
 render () {
@@ -51,7 +64,7 @@ render () {
     <div className='signupbox'>
       <img src={avatar} className='avatar' />
       <h1>Sign Up</h1>
-      <form OnSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit}>
         <p>Sign Up With Email </p>
         <input type='text' name='username' placeholder='Enter Email' value={this.state.username}
             onChange={this.onChange}

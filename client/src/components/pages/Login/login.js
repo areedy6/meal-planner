@@ -60,7 +60,11 @@ class Login extends Component {
             onChange={this.onChange}
             required />
         <p>Password</p>
-        <input type='password' name='password' placeholder='Password' value={this.state.password}
+        <input 
+        type='password' 
+        name='password' 
+        placeholder='Password' 
+        value={this.state.password}
            onChange={this.onChange}
             required />
         <input type='submit'/>

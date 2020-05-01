@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 // Create Schema
 const UserSchema = new Schema({
-  email: {
+  username: {
     type: String,
     required: true
   },
@@ -17,4 +17,6 @@ const UserSchema = new Schema({
   }
 })
 
-module.exports = User = mongoose.model('users', UserSchema)
+const User = mongoose.model('users', UserSchema)
+
+module.exports = User

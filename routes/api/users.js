@@ -8,28 +8,33 @@ const jwt = require('jsonwebtoken')
 const User = require('../../models/User')
 
 // Post route for new users
-module.exports = router.post('/users', (req, res) => {
-  const { email, password } = req.body
+module.exports = router.post('/', (req, res) => {
+  const { username, password } = req.body
+  console.log('/api/users')
 
-  // Validation
-  if (!email || !password) {
+  // Validate
+  if (!username || !password) {
     return res.status(400).json({ msg: 'Please enter all fields' })
   }
 
-  // Check for existing user
-  User.findOne({ email })
+  // Check for a existing user
+  User.findOne({ username })
     .then(user => {
       if (user) return res.status(400).json({ msg: 'User already exists' })
 
       const newUser = new User({
-        email,
+        username,
         password
       })
 
-      // Create hash
+      // Create the hash
       bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hasg(newUser.password, salt, (err, hash) => {
-          if (err) throw err
+        if (err) {
+          throw err
+        }
+
+        bcrypt.hash(newUser.password, salt, (hashErr, hash) => {
+          if (hashErr) throw hashErr
           newUser.password = hash
           newUser.save()
             .then(user => {
@@ -37,14 +42,13 @@ module.exports = router.post('/users', (req, res) => {
                 { id: user.id },
                 config.get('jwtSecret'),
                 { expiresIn: 86400 },
-                (err, token) => {
-                  if (err) throw err
+                (tokenErr, token) => {
+                  if (tokenErr) throw tokenErr
                   res.json({
                     token,
                     user: {
                       id: user.id,
-                      name: user.name,
-                      email: user.email
+                      username: user.email
                     }
                   })
                 })

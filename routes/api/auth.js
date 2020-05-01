@@ -8,16 +8,16 @@ const jwt = require('jsonwebtoken')
 const User = require('../../models/User')
 
 // Post route for Authentication
-module.exports = router.post('/auth', (req, res) => {
-  const { email, password } = req.body
+module.exports = router.post('/', (req, res) => {
+  const { username, password } = req.body
 
   // Validation
-  if (!email || !password) {
+  if (!username || !password) {
     return res.status(400).json({ msg: 'Please enter all fields' })
   }
 
   // Check for existing user
-  User.findOne({ email })
+  User.findOne({ username })
     .then(user => {
       if (!user) return res.status(400).json({ msg: 'User does not exists' })
 
@@ -36,8 +36,7 @@ module.exports = router.post('/auth', (req, res) => {
                 token,
                 user: {
                   id: user.id,
-                  name: user.name,
-                  email: user.email
+                  username: user.email
                 }
               })
             })

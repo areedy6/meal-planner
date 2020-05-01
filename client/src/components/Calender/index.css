@@ -17,7 +17,7 @@ a {
   color: rgba(0,0,0,.85);
 }
 .container {
-  margin: 0 auto;
+  margin: 30px auto;
   /* padding: 0px, 100px; */
   width: 1070px;
   background-color: white;
@@ -57,22 +57,19 @@ a {
 
 
 .nav {
-  display: flex;
+  display: inline;
   justify-content: space-between;
+  position: relative;
   align-items: center;
-  margin-bottom: 40px;
-  background-color: #f5f5f5;
-  padding: 0 20px;
-  height: 120px;
 }
 
 .shopping-list {
   background: none;
+  display: flex;
+  margin-left: 70px;
   font-size: 18px;
   font-weight: 600;
-  border: none;
   cursor: pointer;
-  padding: 10px 20px;
   border-radius: 2px;
 }
 
@@ -223,15 +220,15 @@ a {
 }
 
 .food-item {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .food-item img {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 3px;
 }
 
