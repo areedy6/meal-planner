@@ -8,47 +8,58 @@ import signup from '../signup/signup'
 
 class Login extends Component {
 
-    state = {
-      username: "",
-      password: ""
-    }
+  state = {
+    username: "",
+    password: ""
+  }
+
+
+onChange = e => {
+  const target = e.target
+  const name = target.name
+  const value = target.value
+
+  this.setState({
+    [name]: value
+  })
+}
+
+onSubmit = e => {
+  e.preventDefault()
+
+  const payload = {
+    username: this.state.username,
+    password: this.state.password
+  }
   
 
-  onChange = e => {
-    const target = e.target
-    const name = target.name
-    const value = target.value
-
-    this.setState({
-      [name]: value
-    })
-  }
-
-  onSubmit = e => {
-    e.preventDefault()
-
-    const payload = {
-      username: this.state.username,
-      password: this.state.password
-    }
+  axios ({
+    url: '/api/auth',
+    method: 'POST',
+    data: payload,
     
-
-    axios ({
-      url: '/api/auth',
-      method: 'POST',
-      data: payload
-    })
-    .then(() => {
-      console.log('Payload has been sent to server')
-    })
-    .catch(() => {
-      console.log('Internal server error')
-    })
-  }
-
+  })
+  .then(() => {
+    this.props.history.push("/About");
+  })
+  .catch(function (error) {
+    if (error.response) {
+      // Request made and server responded
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+    } else if (error.request) {
+      // The request was made but no response was received
+      console.log(error.request);
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      console.log('Error', error.message)
+    }
+})
+}
 
   render () {
-  console.log('State', this.state)
+  
   return (
     <div className='loginbox'>
       <img src={avatar} className='avatar' />

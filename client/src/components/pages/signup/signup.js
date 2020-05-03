@@ -39,8 +39,7 @@ onSubmit = e => {
     
   })
   .then(() => {
-    console.log('/api/users')
-    console.log('Payload has been sent to server')
+    this.props.history.push("/login");
   })
   .catch(function (error) {
     if (error.response) {
