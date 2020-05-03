@@ -85,3 +85,7 @@ input[type="password"] {
 {
   color:#ffc107
 }
+
+.submitButton {
+  padding: 5px;
+}

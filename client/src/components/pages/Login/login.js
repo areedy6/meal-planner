@@ -67,7 +67,7 @@ class Login extends Component {
         value={this.state.password}
            onChange={this.onChange}
             required />
-        <input type='submit' value='Submit'/>
+        <input className='submitButton' type='submit' value='Submit'/>
         <br />
         <Link to='/signup'>Don't have an account?</Link>
       </form>

@@ -77,7 +77,7 @@ render () {
          value={this.state.password}
             onChange={this.onChange}
             required  />
-        <input type='submit' value='Submit' />
+        <input className='submitButton' type='submit' value='Submit' />
         <br />
         <br />
       </form>
